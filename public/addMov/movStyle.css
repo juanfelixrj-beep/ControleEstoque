@@ -1,0 +1,101 @@
+@keyframes appear{
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+body {
+    margin: 0;
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    background-image: linear-gradient(to right, #1E3A8A, #3B82F6);
+    overflow: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-image: linear-gradient(to right, #0f172a, #1e3a8a);
+    color: white;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    opacity: 0.8;
+}
+
+#logout{
+    color: red;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(135deg, #1E3A8A, #3B82F6);
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.6);
+    width: 450px;
+    height: 700px;
+    background-color: white;
+    border-radius: 10px;
+    animation: appear 1s;
+}
+.content input, select{
+    width: 250px;
+    height: 25px;
+    font: inherit;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+#dateregister, #id_user, #id_product{
+    color: grey;
+}
+.content button{
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: #60A5FA;
+    transition: all 0.25s ease;
+}
+.content button:hover{
+    background-color: #4c83c5;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
