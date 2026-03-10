@@ -1,2 +1,53 @@
-node_modules
+# Dependências
+node_modules/
+
+# Arquivos de ambiente (segredos, JWT, chaves etc.)
 .env
+.env.*
+
+# Banco de dados SQLite
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos temporários
+tmp/
+temp/
+
+# Cache
+.cache
+.parcel-cache
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# IDEs / editores
+.vscode/
+.idea/
+*.swp
+
+# Build / dist
+dist/
+build/
+
+# Arquivos de teste
+coverage/
+
+# Arquivos do Render (opcional se gerar localmente)
+.render
+
+# arquivos locais diversos
+*.local
+
+# lock do sistema
+*.pid
+*.seed
+*.pid.lock
