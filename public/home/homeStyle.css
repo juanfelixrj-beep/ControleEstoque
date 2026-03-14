@@ -10,20 +10,27 @@
     }
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     font-size: 20px;
     background-image: linear-gradient(to right, #1E3A8A, #3B82F6);
+    min-height: 100vh;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
     padding: 15px 40px;
     background-image: linear-gradient(to right, #0f172a, #1e3a8a);
     color: white;
+    flex-wrap: wrap;
 }
 
 .navbar ul {
@@ -32,6 +39,7 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;
 }
 
 .navbar a {
@@ -44,7 +52,6 @@ body {
     opacity: 0.8;
 }
 
-/* CONTEÚDO */
 .container {
     display: flex;
     align-items: center;
@@ -54,6 +61,7 @@ body {
     gap: 25px;
     color: black;
     margin-top: 25px;
+    padding: 0 20px 30px;
 }
 
 thead,
@@ -69,6 +77,11 @@ td {
     background-color: white;
 }
 
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
 .table {
     box-shadow: 10px 10px 30px rgba(57, 57, 57, 0.8);
     border-spacing: 0;
@@ -76,11 +89,13 @@ td {
     border-collapse: separate;
     border-radius: 10px;
     overflow: hidden;
+    width: 100%;
+    max-width: 1100px;
+    min-width: 700px;
 }
 
 .table_animate {
-    animation: appear;
-    animation-duration: 1s;
+    animation: appear 1s;
 }
 
 #logout {
@@ -100,17 +115,65 @@ button {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: auto;
+    gap: 10px;
+    width: 100%;
+    padding: 0 20px;
 }
 
 .search p {
     color: white;
+    margin: 0;
 }
 
 .search input {
-    min-width: 350px;
+    width: 100%;
+    max-width: 350px;
     min-height: 40px;
     border-radius: 5px;
     font: inherit;
     border: none;
+    padding: 0 12px;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    .navbar {
+        padding: 15px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .container {
+        padding: 0 12px 25px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+
+    .search input {
+        max-width: 100%;
+    }
+
+    thead,
+    tbody,
+    th,
+    tr,
+    td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+    }
 }

@@ -1,4 +1,4 @@
-@keyframes appear{
+@keyframes appear {
     from {
         transform: translateY(-20px);
         opacity: 0;
@@ -9,21 +9,27 @@
     }
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-size: 20px;
     font-family: "Inter", sans-serif;
     background-image: linear-gradient(to right, #1E3A8A, #3B82F6);
-    overflow: hidden;
+    min-height: 100vh;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
     padding: 15px 40px;
     background-image: linear-gradient(to right, #0f172a, #1e3a8a);
     color: white;
+    flex-wrap: wrap;
 }
 
 .navbar ul {
@@ -32,6 +38,7 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;
 }
 
 .navbar a {
@@ -44,7 +51,7 @@ body {
     opacity: 0.8;
 }
 
-#logout{
+#logout {
     color: red;
 }
 
@@ -53,34 +60,47 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: calc(100vh - 70px);
     background-image: linear-gradient(135deg, #1E3A8A, #3B82F6);
+    padding: 30px 20px;
 }
+
 .content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.6);
-    width: 450px;
-    height: 700px;
+    width: 100%;
+    max-width: 450px;
+    min-height: 700px;
     background-color: white;
     border-radius: 10px;
     animation: appear 1s;
+    padding: 30px 20px;
 }
-.content input, select{
-    width: 250px;
-    height: 25px;
+
+.content input,
+.content select {
+    width: 100%;
+    max-width: 250px;
+    height: 40px;
     font: inherit;
     border-radius: 5px;
     margin-bottom: 25px;
+    padding: 0 10px;
 }
-#dateregister, #id_user, #id_product{
+
+#dateregister,
+#id_user,
+#id_product {
     color: grey;
 }
-.content button{
-    width: 250px;
+
+.content button {
+    width: 100%;
+    max-width: 250px;
     height: 40px;
     border-radius: 5px;
     border: none;
@@ -89,13 +109,53 @@ body {
     background-color: #60A5FA;
     transition: all 0.25s ease;
 }
-.content button:hover{
+
+.content button:hover {
     background-color: #4c83c5;
 }
-form{
+
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    .navbar {
+        padding: 15px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .content {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 20px 12px;
+    }
+
+    .content {
+        padding: 25px 15px;
+        border-radius: 8px;
+    }
+
+    .content input,
+    .content select,
+    .content button {
+        max-width: 100%;
+    }
 }
