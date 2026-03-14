@@ -1,50 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="stylesheet" href="homeStyle.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="homeStyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <nav class="navbar">
-        <ul>
-            <li><a href="#" id="logout">Sair</a></li>
-            <li><a href="../addProduct/add.html">Adicionar Item</a></li>
-        </ul>
+      <ul>
+        <li><a href="#" id="logout">Sair</a></li>
+        <li><a href="../addProduct/add.html">Adicionar Item</a></li>
+      </ul>
     </nav>
-    
 
     <div class="container">
-        <div class="search">
-            <p>Pesquise o nome do seu produto:</p>
-            <input type="text" id="search" placeholder="Pesquisar...">
+      <div class="search">
+        <p>Pesquise o nome do seu produto:</p>
+        <input type="text" id="search" placeholder="Pesquisar..." />
+      </div>
+      <div class="content">
+        <div class="table-wrapper">
+          <table class="table table-animate">
+            <thead>
+              <th>Id</th>
+              <th>Nome</th>
+              <th>Código</th>
+              <th>Unidade de Medida</th>
+              <th>Preço(R$)</th>
+              <th>Custo(R$)</th>
+              <th>Excluir</th>
+              <th>Adicionar Movimentação</th>
+              <th>Ver Movimentações</th>
+              <th>Saldo do Produto</th>
+              <th>Lucro Atual do Produto</th>
+            </thead>
+            <tbody id="tablecontent"></tbody>
+          </table>
         </div>
-        <div class="content">
-            <table class="table">
-                <thead>
-                    <th>Id</th>
-                    <th>Nome</th>
-                    <th>Código</th>
-                    <th>Unidade de Medida</th>
-                    <th>Preço(R$)</th>
-                    <th>Custo(R$)</th>
-                    <th>Excluir</th>
-                    <th>Adicionar Movimentação</th>
-                    <th>Ver Movimentações</th>
-                    <th>Saldo do Produto</th>
-                    <th>Lucro Atual do Produto</th>
-                </thead>
-                <tbody id="tablecontent">
-
-                </tbody>
-            </table>
-        </div>
+      </div>
     </div>
-</body>
-<script type="module" src="homeScript.js"></script>
+  </body>
+  <script type="module" src="homeScript.js"></script>
 </html>
